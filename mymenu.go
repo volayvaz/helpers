@@ -45,7 +45,7 @@ func (mnu *Menu) DisplayMenu() {
 			newline = " "
 		}
 		if i == mnu.CursorPos {
-			cursor = "> "
+			cursor = ">>> "
 		}
 		fmt.Printf("%s %s%s", cursor, mnu.MenuItems[i].Text, newline)
 	}
