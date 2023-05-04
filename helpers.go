@@ -36,7 +36,7 @@ func PrintSlice(a []int) {
 	}
 }
 
-func genString(length int) string {
+func GenString(length int) string {
 	var generatedString bytes.Buffer
 	l := rand.Intn(length)
 	if l < 3 {
