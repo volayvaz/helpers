@@ -1,6 +1,7 @@
 package helpers
 
 import (
+	"bytes"
 	"fmt"
 	"math/rand"
 )
@@ -33,4 +34,17 @@ func PrintSlice(a []int) {
 	for i := 0; i < count; i++ {
 		fmt.Println(a[i])
 	}
+}
+
+func genString(length int) string {
+	var generatedString bytes.Buffer
+	l := rand.Intn(length)
+	if l < 3 {
+		l = 3
+	}
+	for j := 0; j < l; j++ {
+		r := rand.Int31n(22) + 65
+		generatedString.WriteRune(r)
+	}
+	return generatedString.String()
 }
